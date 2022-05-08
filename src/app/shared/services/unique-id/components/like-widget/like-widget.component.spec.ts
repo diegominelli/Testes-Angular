@@ -1,3 +1,4 @@
+import { LikeWidgetModule } from './like-widget.module';
 import { UniqueIdService } from './../../unique-id.service';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { LikeWidgetComponent } from './like-widget.component';
@@ -8,9 +9,7 @@ describe(LikeWidgetComponent.name, () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [LikeWidgetComponent],
-      providers: [UniqueIdService],
-      imports: [FontAwesomeModule],
+      imports: [LikeWidgetModule],
     }).compileComponents();
 
     fixture = TestBed.createComponent(LikeWidgetComponent);
