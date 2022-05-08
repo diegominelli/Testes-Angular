@@ -1,5 +1,6 @@
+import { UniqueIdService } from './../../unique-id.service';
 import { CommonModule } from '@angular/common';
-import { EventEmitter, Input, NgModule, Output } from '@angular/core';
+import { NgModule } from '@angular/core';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { LikeWidgetComponent } from './like-widget.component';
 
@@ -7,9 +8,6 @@ import { LikeWidgetComponent } from './like-widget.component';
   declarations: [LikeWidgetComponent],
   imports: [CommonModule, FontAwesomeModule],
   exports: [LikeWidgetComponent],
+  providers: [UniqueIdService],
 })
-export class LikeWidgetModule {
-  @Output() public liked = new EventEmitter<void>();
-  @Input() public likes = 0;
-  @Input() public id = null;
-}
+export class LikeWidgetModule {}
